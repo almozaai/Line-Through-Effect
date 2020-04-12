@@ -4,9 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
   </head>
   <body>
-    hello
+    <div class="line"></div>
+    <h1 id="text">We Love to Play</h1>
   </body>
+  <script>
+    const text = document.getElementById("text");
+    const newEl = document.createElement("h1");
+    const newArr = text.innerText.split("");
+
+    newEl.innerHTML = `
+      ${newArr
+        .map(item => `<span style='${randomVisibility()}'>${item}</span>`)
+        .join("")}
+    `;
+    function randomVisibility() {
+      return Math.random() > 0.6 ? "visibility: hidden" : "visibility: visible";
+    }
+
+    newEl.classList.add("visi");
+    document.body.appendChild(newEl);
+  </script>
 </html>
