@@ -14,19 +14,17 @@
   <script>
     const text = document.getElementById("text");
     const newArr = text.innerText.split("");
-
     const newEl = document.createElement("h1");
 
-    const randomVisibility = () => {
-      return Math.random() > 0.6 ? "visibility: hidden" : "visibility: visible";
-    };
-
     newEl.innerHTML = `${newArr
-      .map(letter => `<span style='${randomVisibility()}'>${letter}</span>`)
+      .map(e => `<span style='${randomvisibility()}'>${e}</span>`)
       .join("")}`;
 
-    newEl.classList.add("hide");
+    function randomvisibility() {
+      return Math.random() > 0.5 ? "visibility: hidden" : "visibility: visible";
+    }
 
+    newEl.classList.add("upFront");
     document.body.appendChild(newEl);
   </script>
 </html>
