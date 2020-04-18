@@ -13,18 +13,19 @@
   </body>
   <script>
     const text = document.getElementById("text");
-    const newArr = text.innerText.split("");
-    const newEl = document.createElement("h1");
-
-    newEl.innerHTML = `${newArr
-      .map(e => `<span style='${randomvisibility()}'>${e}</span>`)
+    const textEl = document.createElement("h1");
+    const textArr = text.innerText.split("");
+    textEl.innerHTML = `${textArr
+      .map(el => `<span style='${randomVisability()}'>${el}</span>`)
       .join("")}`;
-
-    function randomvisibility() {
-      return Math.random() > 0.5 ? "visibility: hidden" : "visibility: visible";
+    function randomVisability() {
+      return Math.random() > 0.6
+        ? "visibility: hidden;"
+        : "visibility: visibile;";
     }
 
-    newEl.classList.add("upFront");
-    document.body.appendChild(newEl);
+    textEl.classList.add("visibleLetter");
+
+    document.body.appendChild(textEl);
   </script>
 </html>

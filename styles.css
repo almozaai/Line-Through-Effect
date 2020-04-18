@@ -1,42 +1,41 @@
-@import url("");
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Muli", sans-serif;
-  background-color: #51b7f3;
+  font-family: sans-serif;
+  background-color: #45bee0;
   overflow: hidden;
 }
 
 h1 {
   font-size: 10vw;
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -110%);
-  width: 100%;
   text-align: center;
 }
 
 .line {
   background-color: #fff;
-  width: 30vw;
-  height: 2vh;
+  width: 6vw;
+  height: 5vh;
   position: absolute;
-  top: 50%;
+  top: 47%;
   left: 0;
   transform: translate(-50%);
   animation: grow 3s linear forwards;
   z-index: 2;
 }
 
-@keyframes grow {
-  to {
-    width: 202%;
-  }
+.visibleLetter {
+  z-index: 3;
 }
 
-.upFront {
-  z-index: 3;
+@keyframes grow {
+  to {
+    width: 210%;
+  }
 }
