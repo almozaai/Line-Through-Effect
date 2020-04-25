@@ -1,41 +1,47 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
+  background-color: #5fa3f1;
   font-family: sans-serif;
-  background-color: #45bee0;
   overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 
 h1 {
   font-size: 10vw;
-  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -110%);
-  text-align: center;
+  transform: translate(-40%, -50%);
+  width: 100%;
 }
 
 .line {
-  background-color: #fff;
-  width: 6vw;
-  height: 5vh;
+  width: 0;
+  border-radius: 5px;
+  background-color: white;
+  height: 40px;
   position: absolute;
-  top: 47%;
+  top: 48%;
   left: 0;
-  transform: translate(-50%);
-  animation: grow 3s linear forwards;
+  /* transform: translate(-30%); */
   z-index: 2;
-}
-
-.visibleLetter {
-  z-index: 3;
+  transition: all 1s;
+  animation: grow 1s linear 0.3s forwards;
 }
 
 @keyframes grow {
   to {
-    width: 210%;
+    width: 100%;
   }
+}
+
+.visilLetter {
+  z-index: 2;
 }
